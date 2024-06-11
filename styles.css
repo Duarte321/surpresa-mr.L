@@ -1,89 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('https://www.example.com/romantic-background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #f4f4f4;
     margin: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    padding: 0;
 }
 
 .container {
-    position: relative;
-    z-index: 2;
+    max-width: 600px;
+    margin: 50px auto;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 50px;
-    border-radius: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-family: 'Dancing Script', cursive;
-    color: #ff6666;
-    margin-bottom: 10px;
-    font-size: 48px;
+    font-size: 2em;
+    color: #333;
 }
 
-.message {
-    font-family: 'Dancing Script', cursive;
-    color: #ff6666;
+p {
+    font-size: 1.2em;
+    color: #666;
     margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
 }
 
-#accept-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-#accept-btn:hover {
+button:hover {
     background-color: #45a049;
-    transform: scale(1.1);
 }
 
-#reject-btn {
+#reject {
     background-color: #f44336;
-    color: white;
-    position: absolute; /* Para permitir a movimentação */
-    transition: transform 0.3s;
 }
 
-#reject-btn:hover {
-    background-color: #e31e10;
-    transform: scale(1.1);
-}
-
-.engaged-message {
-    font-family: 'Dancing Script', cursive;
-    color: #ff6666;
-    margin-top: 20px;
-    font-size: 36px;
+#reject:hover {
+    background-color: #d32f2f;
 }

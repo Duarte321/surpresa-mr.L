@@ -1,23 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const rejectBtn = document.getElementById('reject-btn');
-    const acceptBtn = document.getElementById('accept-btn');
-    const container = document.querySelector('.container');
-    const engagedMessage = document.getElementById('engaged-message');
+function moveButton() {
+    var button = document.getElementById('reject');
+    var newX = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+    var newY = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+    
+    button.style.position = 'absolute';
+    button.style.left = newX + 'px';
+    button.style.top = newY + 'px';
+}
 
-    rejectBtn.addEventListener('mouseover', () => {
-        const containerRect = container.getBoundingClientRect();
-        const buttonRect = rejectBtn.getBoundingClientRect();
-
-        const randomX = Math.random() * (containerRect.width - buttonRect.width);
-        const randomY = Math.random() * (containerRect.height - buttonRect.height);
-
-        rejectBtn.style.left = `${randomX}px`;
-        rejectBtn.style.top = `${randomY}px`;
-    });
-
-    acceptBtn.addEventListener('click', () => {
-        engagedMessage.style.display = 'block';
-        acceptBtn.style.display = 'none';
-        rejectBtn.style.display = 'none';
-    });
-});
+document.getElementById('accept').onclick = function() {
+    // Exibir alerta
+    alert('ENFIM NOIVOS L & T!');
+    
+    // Redirecionar para a música no YouTube
+    window.location.href = 'https://youtu.be/lBNGn_XU7Rw';
+};

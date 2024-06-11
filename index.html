@@ -1,22 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedido de Casamento</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2023/02/26/16/32/hearts-7816307_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff5e62;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff3336;
+        }
+
+        #reject {
+            background-color: #333;
+        }
+
+        #reject:hover {
+            background-color: #000;
+        }
+    </style>
 </head>
 <body>
-    <div class="overlay"></div>
     <div class="container">
-        <h1>Quer casar comigo?</h1>
-        <p class="message">Você é o amor da minha vida e quero passar todos os meus dias ao seu lado.</p>
-        <div class="buttons">
-            <button id="accept-btn">Aceitar</button>
-            <button id="reject-btn">Rejeitar</button>
-        </div>
-        <p id="engaged-message" class="engaged-message" style="display: none;">Enfim noivos!</p>
+        <h1>Quer se casar comigo?</h1>
+        <p>Aceita ser minha Pesseguinha para toda a eternidade Minha Deusa?</p>
+        <button id="accept">Sim</button>
+        <button id="reject" onmouseover="moveButton()">Não</button>
     </div>
     <script src="script.js"></script>
 </body>
