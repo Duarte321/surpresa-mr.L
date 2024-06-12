@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         body {
-            background-image: url('https://cdn.pixabay.com/photo/2023/02/26/16/32/hearts-7816307_1280.jpg');
+            background-image: url('fotofundo.jpg');
             background-size: cover;
             background-position: center;
             font-family: 'Arial', sans-serif;
@@ -15,6 +15,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+               .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .photos img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .photos img:hover {
+            transform: scale(3.5);
         }
 
         .container {
@@ -61,11 +81,19 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Quer se casar comigo?</h1>
-        <p>Aceita ser minha Pesseguinha para toda a eternidade Minha Deusa?</p>
-        <button id="accept">Sim</button>
-        <button id="reject" onmouseover="moveButton()">Não</button>
+    <div class="background-post">
+        <div class="photos">
+            <img src="foto1.jpeg" alt="album 1">
+            <img src="foto2.jpeg" alt="album 2">
+            <img src="foto3.jpeg" alt="album 3">
+            <!-- Adicione mais fotos conforme necessário -->
+        </div>
+        <div class="container">
+            <h1>Quer se casar comigo?</h1>
+            <p>Este é um momento especial, e eu gostaria de compartilhá-lo com você.</p>
+            <button id="accept">Sim</button>
+            <button id="reject" onmouseover="moveButton()">Não</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
